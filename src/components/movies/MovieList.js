@@ -64,8 +64,8 @@ class MovieList extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    movies: state.movies, //Use Object?
+    movies: Object.values(state.movies), //Use Object?
     }
 }
 
-export default connect(mapStateToProps, {fetchMovies})(MovieList)
+export default connect(mapStateToProps, { fetchMovies })(MovieList)

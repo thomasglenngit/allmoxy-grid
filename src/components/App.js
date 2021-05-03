@@ -6,11 +6,12 @@ import MovieCreate from './movies/MovieCreate'
 import MovieEdit from './movies/MovieEdit'
 import MovieDelete from './movies/MovieDelete'
 import MovieList from './movies/MovieList'
+import history from '../history'
 
 const App = () => {
   return (
     <div className="ui container">
-      <Router>
+      <Router history={history}>
         <div>
           <Header />
           <Switch>
@@ -24,7 +25,6 @@ const App = () => {
         </div>
       </Router>
     </div>
-
   )
 }
 

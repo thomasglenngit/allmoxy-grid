@@ -1,4 +1,5 @@
 import movies from '../apis/movies'
+import history from '../history'
 import {
   FETCH_MOVIES,
   FETCH_MOVIE,
@@ -23,16 +24,19 @@ export const createMovie = formValues => async (dispatch, getState ) => {
   const response = await movies.post('/movies', { ...formValues})
 
   dispatch({ type: CREATE_MOVIE, payload: response.data })
+  history.pushState('/')
 }
 
 export const editMovie = (id, formValues) => async dispatch => {
   const response = await movies.patch(`/movies/${id}`, formValues)
 
 dispatch({ type: EDIT_MOVIE, payload: response.data })
+history.push('/')
 }
 
 export const deleteMovie = id => async dispatch => {
   await movies.delete(`/movies/${id}`)
 
   dispatch({ type: DELETE_MOVIE, payload: id })
+  history.push('/')
 }

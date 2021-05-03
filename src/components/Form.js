@@ -1,11 +1,14 @@
 import React from 'react'
+// import { Field, reduxForm } from 'redux-form'
 
-const Form = () => {
-  return (
+class Form extends React.Component {
+  render() {return (
     <React.Fragment>
       <div className="ui five column relaxed grid">
         <div className="column">
-          Title
+          <div>Title</div>
+          <div>something</div>
+          
   </div>
         <div className="column">
           Description
@@ -21,7 +24,7 @@ const Form = () => {
   </div>
       </div>
     </React.Fragment>
-  )
+  )}
 }
 
 export default Form

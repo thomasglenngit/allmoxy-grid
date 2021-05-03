@@ -1,6 +1,7 @@
 import React from 'react'
-import { createStream } from '../../actions'
-import Form from '../Form'
+import { connect } from 'react-redux'
+import { createMovie } from '../../actions'
+import MovieForm from './MovieForm'
 
 
 class MovieCreate extends React.Component {
@@ -9,9 +10,10 @@ class MovieCreate extends React.Component {
     return (
       <div>
         <h3>Enter a Movie Title</h3>
+        <MovieForm onSubmit={this.onSubmit} />
       </div>
     )
   }
 }
 
-export default MovieCreate
+export default connect(null, {createMovie})(MovieCreate)

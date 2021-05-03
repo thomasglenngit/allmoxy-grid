@@ -5,6 +5,11 @@ import { Link } from 'react-router-dom'
 
 class MovieList extends React.Component {
 
+  componentDidMount() {
+    console.log(this.props)
+    this.props.fetchMovies()
+  }
+
   renderAdmin(movie) {
     return (
       <div className="right floated content">

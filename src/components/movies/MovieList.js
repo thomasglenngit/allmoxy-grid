@@ -1,9 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchMovie } from '../../actions.js'
+import { fetchMovies } from '../../actions'
 import { Link } from 'react-router-dom'
 
 class MovieList extends React.Component {
+
+  renderAdmin(movie) {
+    return (
+      <div className="right floated content">
+        <Link to={`/movies/edit/${movie.id}`} className="ui button primary">Edit</Link>
+        <Link to={`/movies/delete/${movie.id}`} className="ui button negative">Delete</Link>
+      </div>
+    )
+  }
   
 
   renderList() {
@@ -48,4 +57,10 @@ class MovieList extends React.Component {
   }
 }
 
-export default MovieList
+const mapStateToProps = (state) => {
+  return {
+    movies: state.movies, //Use Object?
+    }
+}
+
+export default connect(mapStateToProps, {fetchMovies})(MovieList)

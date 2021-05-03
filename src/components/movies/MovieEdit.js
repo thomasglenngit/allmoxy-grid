@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchMovie, editMovie } from '../../actions.js'
+import { fetchMovie, editMovie } from '../../actions'
 import Form from '../Form'
 
 class MovieEdit extends React.Component {

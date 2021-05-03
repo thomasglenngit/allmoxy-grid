@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Form from './Form'
+import MovieList from './movies/MovieList'
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <div className="ui container">
         <Header />
         <Form />
+        {/* <MovieList /> */}
       </div>
     </React.Fragment>
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { createStream } from '../../actions.js'
+import { createStream } from '../../actions'
 import Form from '../Form'
 
 

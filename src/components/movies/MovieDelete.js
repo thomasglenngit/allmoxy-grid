@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchMovie, deleteMovie } from '../../actions.js'
+import { fetchMovie, deleteMovie } from '../../actions'
 
 class MovieDelete extends React.Component {
 

@@ -4,9 +4,35 @@
 
 <img src="./src/img/grid-image.png">
 
-# Technologies used: 
- - JavaScript, JSX, React, ReactDOM, Yarn, Visual Studio Code, Google Firebase/Firestore.
+# About this project
+The parameters of this project were the following:
 
+- Build a small product grid. With the following columns:
+Title, Description, Price, Quantity, Image
+- The grid should be sortable and allow the user to add/edit products. 
+- There should be 5 sample entries and be publicly accessible so I can test it out. 
+- We also need to be able to see the code.
+
+
+# Technologies used: 
+ - JavaScript, JSX, React, Redux, ReactDOM, Yarn, Visual Studio Code, json-server, Semantic-ui
+
+ # To Run This Application:
+  1. Clone from repository using command: 
+    $ `git clone https://github.com/thomasglenngit/allmoxy-grid`
+  2. Open downloaded file using preferred code editor.
+  3. Once file opened, create 2 terminals.
+  4. In first terminal go to the directory:
+    $ `cd allmoxy-grid/server`
+  5. Once in the "server" directory type:
+    $ `yarn start`  This will start the local server holding the data on localhost:3001.
+  6. On the second terminal, go to the directory:
+    $ `cd allmoxy-grid/client`
+  7. Once in the "client" directory type:
+    $ `yarn start` This will run the application in the browser on `http://localhost:3000/`
+
+
+These steps will allow the user to interact with the application to create, read, update and delete data. 
 
 
 # Getting Started with Create React App

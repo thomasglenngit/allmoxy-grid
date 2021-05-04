@@ -1,0 +1,60 @@
+{
+  "movies": [
+    {
+      "title": "Raiders of the Lost Ark",
+      "description": "Archeologist vs. Nazis",
+      "price": "$19.99",
+      "quantity": "450",
+      "image": "star",
+      "id": 1
+    },
+    {
+      "title": "Better Off Dead",
+      "description": "High School Dead Beat Snags French Girlfriend",
+      "price": "$14.99",
+      "quantity": "36",
+      "image": "Flag",
+      "id": 2
+    },
+    {
+      "title": "Raising Arizona",
+      "description": "Couple Steals Baby. Everything works out.",
+      "price": "$14.99",
+      "quantity": "99",
+      "image": "baby",
+      "id": 3
+    },
+    {
+      "title": "Noises Off",
+      "description": "Disastrous British Play x4",
+      "price": "$17.99",
+      "quantity": "25",
+      "image": "Nuke",
+      "id": 4
+    },
+    {
+      "title": "Empire of the Sun",
+      "description": "British boy survives internment camp",
+      "price": "$29.99",
+      "quantity": "78",
+      "image": "sun",
+      "id": 5
+    },
+    {
+      "title": "The Golden Child",
+      "description": "Child finder finds child",
+      "price": "$19.99",
+      "quantity": "143",
+      "image": "Mars",
+      "id": 6
+    },
+    {
+      "title": "Revenge of the Nerds",
+      "description": "The nerds get revenge",
+      "price": "$1",
+      "quantity": "6789",
+      "image": "nerd",
+      "id": 7
+    }
+  ]
+}

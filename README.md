@@ -36,5 +36,5 @@ Title, Description, Price, Quantity, Image
 1. At this point, JSON-server requires that the user <b>REFRESH THE PAGE</b> after every click to effectuate the event. It's a pain right now, but I can figure it out.
 (ex. click on 'edit', => blank page, click 'refresh page' => edit page)
 2. I attempted to handle sorting the database entries (movies list) programmatically, using reducers and actions. It sorts the list, but then adds it to the existing list. My work-around was to clear state via conditionals in the reducers/index.js (I've left this there, coded-out), which works, but also disables the form functions. I'm close on this one, but in retrospect, I should have handled sorting functionally, rather than programmatically.
-3. My intention was to hook-up an image api to generate images into that category, but I have run out of the time I alotted myself. 
+3. Image api pending
 

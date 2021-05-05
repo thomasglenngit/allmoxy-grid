@@ -11,13 +11,13 @@ class MovieList extends React.Component {
   }
 
   componentDidUpdate() {
-    if (document.querySelector('.item') === 'description'){
+    if (this.renderSortDropdown('.item') === 'description') {
       this.props.fetchDescriptions()
     }
-    if (document.querySelector('.item') === 'prices'){
+    if (document.querySelector('.item') === 'prices') {
       this.props.fetchPrices()
     }
-    if (document.querySelector('.item') === 'quantities'){
+    if (document.querySelector('.item') === 'quantities') {
       this.props.fetchQuantities()
     }
   }
@@ -52,22 +52,24 @@ class MovieList extends React.Component {
   }
 
   renderSortDropdown() {
-    // const selectSort = document.querySelector('#select')
+    // const selectSort = document.querySelector('.dropdown')
 
     // selectSort.addEventListener('change', (event) => {
-    //   const item = document.querySelector('.item') 
+    //   const item = document.querySelector('.item')
     //   item.textContent = event.target.value
     // })
     return (
-      <div className="ui compact menu">
-        <div className="ui simple dropdown item">
-          Sort Results By:
+      <div className="dropdown">
+        <div className="ui compact menu">
+          <div className="ui simple dropdown item">
+            Sort Results By:
         <i className="dropdown icon"></i>
-          <div className="menu" id="select">
-            <div className="item" value='title'>Title</div>
-            <div className="item" value='description'>Description</div>
-            <div className="item" value='price'>Price</div>
-            <div className="item" value='quantity'>Quantity</div>
+            <div className="menu" id="select">
+              <div className="item" value='title' onClick={this.props.fetchTitles}>Title</div>
+              <div className="item" value='description' onClick={this.props.fetchDescriptions}>Description</div>
+              <div className="item" value='price' onClick={this.props.fetchPrices}>Price</div>
+              <div className="item" value='quantity' onClick={this.props.fetchQuantities}>Quantity</div>
+            </div>
           </div>
         </div>
       </div>
@@ -93,7 +95,7 @@ class MovieList extends React.Component {
         <div className="ui celled list">
           {this.renderList()}
         </div>
-        <div style={{float: 'left'}}>
+        <div style={{ float: 'left' }}>
           {this.renderSortDropdown()}
         </div>
         {this.renderCreate()}

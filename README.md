@@ -2,7 +2,7 @@
 ## A movie catalogue proof-of-concept exercise for ALLMOXY
 ### by Thomas Glenn
 
-<img src="./src/img/grid-image.png">
+<img src="./client/src/img/grid-image.png">
 
 # About this project
 The parameters of this project were the following:

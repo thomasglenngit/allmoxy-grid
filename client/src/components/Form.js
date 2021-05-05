@@ -22,7 +22,7 @@ onSubmit = (formValues) => {
       <div className="ui five column relaxed grid">
         <div className="column">
           <div>Title</div>
-          <div>something</div>
+          
           
   </div>
         <div className="column">

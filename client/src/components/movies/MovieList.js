@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchMovies } from '../../actions'
+import { fetchMovies, fetchTitles, fetchDescriptions, fetchPrices, fetchQuantities } from '../../actions'
 import { Link } from 'react-router-dom'
 
 
@@ -8,7 +8,18 @@ class MovieList extends React.Component {
 
   componentDidMount() {
     this.props.fetchMovies()
-    console.log(this.props)
+  }
+
+  componentDidUpdate() {
+    if (document.querySelector('.item') === 'description'){
+      this.props.fetchDescriptions()
+    }
+    if (document.querySelector('.item') === 'prices'){
+      this.props.fetchPrices()
+    }
+    if (document.querySelector('.item') === 'quantities'){
+      this.props.fetchQuantities()
+    }
   }
 
   renderAdmin(movie) {
@@ -19,7 +30,7 @@ class MovieList extends React.Component {
       </div>
     )
   }
-  
+
 
   renderList() {
     return this.props.movies.map(movie => {
@@ -30,14 +41,37 @@ class MovieList extends React.Component {
           <div className="content">
             <Link to={`/movies/${movie.id}`} className="header">{movie.title}</Link>
 
-          <div className="description">Description:  {movie.description}</div>
-          <div className="price">Price:  {movie.price}</div>
-          <div className="quantity">Quantity:  {movie.quantity}</div>
-          <div className="image">Image:  {movie.image}</div>
+            <div className="description">Description:  {movie.description}</div>
+            <div className="price">Price:  {movie.price}</div>
+            <div className="quantity">Quantity:  {movie.quantity}</div>
+            <div className="image">Image:  {movie.image}</div>
           </div>
         </div>
       )
     })
+  }
+
+  renderSortDropdown() {
+    // const selectSort = document.querySelector('#select')
+
+    // selectSort.addEventListener('change', (event) => {
+    //   const item = document.querySelector('.item') 
+    //   item.textContent = event.target.value
+    // })
+    return (
+      <div className="ui compact menu">
+        <div className="ui simple dropdown item">
+          Sort Results By:
+        <i className="dropdown icon"></i>
+          <div className="menu" id="select">
+            <div className="item" value='title'>Title</div>
+            <div className="item" value='description'>Description</div>
+            <div className="item" value='price'>Price</div>
+            <div className="item" value='quantity'>Quantity</div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   renderCreate() {
@@ -50,12 +84,17 @@ class MovieList extends React.Component {
     )
   }
 
+
+
   render() {
     return (
       <div>
         <h2>Movies</h2>
         <div className="ui celled list">
           {this.renderList()}
+        </div>
+        <div style={{float: 'left'}}>
+          {this.renderSortDropdown()}
         </div>
         {this.renderCreate()}
       </div>
@@ -66,7 +105,7 @@ class MovieList extends React.Component {
 const mapStateToProps = (state) => {
   return {
     movies: Object.values(state.movies)
-    }
+  }
 }
 
-export default connect(mapStateToProps, { fetchMovies })(MovieList)
+export default connect(mapStateToProps, { fetchMovies, fetchTitles, fetchDescriptions, fetchPrices, fetchQuantities })(MovieList)

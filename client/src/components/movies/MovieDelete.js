@@ -27,7 +27,7 @@ class MovieDelete extends React.Component {
     if (!this.props.movie) {
       return 'Are you sure you want to delete this movie?'
     }
-    return `Are you sure you want to delete this movie with title: ${this.props.movie.title}`
+    return `Are you sure you want to delete this movie: "${this.props.movie.title}" ?`
   }
 
   render() {

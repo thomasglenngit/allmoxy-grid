@@ -1,5 +1,5 @@
 # Catalogulous
-## A movie catalogue proof of concept exercise for ALLMOXY
+## A movie catalogue proof-of-concept exercise for ALLMOXY
 ### by Thomas Glenn
 
 <img src="./src/img/grid-image.png">

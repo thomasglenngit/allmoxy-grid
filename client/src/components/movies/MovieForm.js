@@ -2,6 +2,7 @@ import React from 'react'
 import { Field, reduxForm } from 'redux-form'
 
 class MovieForm extends React.Component {
+
   renderError({ error, touched }) {
     if (touched && error) {
       return (
@@ -61,6 +62,7 @@ const validate = (formValues) => {
   }
   return errors
 }
+
 
 export default reduxForm({
   form: 'movieForm',

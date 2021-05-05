@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className="ui secondary pointing menu">
-      <Link to="/" className="item">
-        Allmoxy
+    <div className="ui secondary pointing menu" style={{fontSize: '30px', fontFamily: 'sans-serif'}}>
+      <Link to="/" className="item" >
+        Catalogulous
     </Link>
       <div className="right menu">
         <Link to="/" className="item">

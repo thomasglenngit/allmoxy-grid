@@ -3,7 +3,6 @@ import { Field, reduxForm } from 'redux-form'
 
 class Form extends React.Component {
 
-
 renderInput({ input, label }) {
   return(
     <div className={`field`}>

@@ -45,16 +45,8 @@
       "description": "Child finder finds child",
       "price": "$19.99",
       "quantity": "143",
-      "image": "Mars",
+      "image": "Jupiter",
       "id": 6
-    },
-    {
-      "title": "Revenge of the Nerds",
-      "description": "The nerds get revenge",
-      "price": "$1",
-      "quantity": "6789",
-      "image": "nerd",
-      "id": 7
     }
   ]
 }

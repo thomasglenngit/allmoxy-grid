@@ -11,6 +11,17 @@ import {
   DELETE_MOVIE,
 } from '../actions/types'
 
+// const INITIAL_STATE = {
+  // fetchMovies: false,
+  // fetchMovie: false,
+  // editMovie: false,
+  // createMovie: false,
+  // deleteMovie: false,
+  // fetchTitles: false,
+  // fetchPrices: false,
+  // fetchQuantities: false,
+// }
+
 
 export default (state = {}, action) => {
   switch (action.type) {

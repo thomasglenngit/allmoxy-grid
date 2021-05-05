@@ -37,7 +37,7 @@ class MovieList extends React.Component {
       return (
         <div className="item" key={movie.id}>
           {this.renderAdmin(movie)}
-          <i className="large middle aligned film icon"></i>
+          <i className="huge middle aligned film icon"></i>
           <div className="content">
             <Link to={`/movies/${movie.id}`} className="header">{movie.title}</Link>
 

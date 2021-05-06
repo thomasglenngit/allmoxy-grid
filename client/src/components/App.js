@@ -14,7 +14,6 @@ const App = () => {
       <Router history={history}>
         <div>
           <Header />
-          <Form />
           <Switch>
             <Route path="/" exact component={MovieList}></Route>
             <Route path="/movies/new" exact component={MovieCreate}></Route>

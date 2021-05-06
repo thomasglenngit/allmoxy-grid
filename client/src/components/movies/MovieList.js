@@ -10,18 +10,6 @@ class MovieList extends React.Component {
     this.props.fetchMovies()
   }
 
-  componentDidUpdate() {
-    if (this.renderSortDropdown('.item') === 'description') {
-      this.props.fetchDescriptions()
-    }
-    if (document.querySelector('.item') === 'prices') {
-      this.props.fetchPrices()
-    }
-    if (document.querySelector('.item') === 'quantities') {
-      this.props.fetchQuantities()
-    }
-  }
-
   renderAdmin(movie) {
     return (
       <div className="right floated content">
@@ -31,7 +19,6 @@ class MovieList extends React.Component {
     )
   }
 
-
   renderList() {
     return this.props.movies.map(movie => {
       return (
@@ -39,12 +26,36 @@ class MovieList extends React.Component {
           {this.renderAdmin(movie)}
           <i className="huge middle aligned film icon"></i>
           <div className="content">
-            <Link to={`/movies/${movie.id}`} className="header">{movie.title}</Link>
+            {/*  */}
+            <div className="ui five column relaxed grid" style={{ fontWeight: 'bold' }}>
+              <div className="column">
+                <div>Title</div>
+                <Link to={`/movies/${movie.id}`} className="header">{movie.title}</Link>
+              </div>
+              <div className="column">
+                Description
+          <div className="description">{movie.description}</div>
+              </div>
+              <div className="column">
+                Price
+          <div className="price">{movie.price}</div>
+              </div>
+              <div className="column">
+                Quantity
+          <div className="quantity">{movie.quantity}</div>
+              </div>
+              <div className="column">
+                Image
+          <div className="image">{movie.image}</div>
+              </div>
+            </div>
 
-            <div className="description">Description:  {movie.description}</div>
-            <div className="price">Price:  {movie.price}</div>
-            <div className="quantity">Quantity:  {movie.quantity}</div>
-            <div className="image">Image:  {movie.image}</div>
+
+
+
+
+
+
           </div>
         </div>
       )
@@ -52,12 +63,6 @@ class MovieList extends React.Component {
   }
 
   renderSortDropdown() {
-    // const selectSort = document.querySelector('.dropdown')
-
-    // selectSort.addEventListener('change', (event) => {
-    //   const item = document.querySelector('.item')
-    //   item.textContent = event.target.value
-    // })
     return (
       <div className="dropdown">
         <div className="ui compact menu">
@@ -85,8 +90,6 @@ class MovieList extends React.Component {
       </div>
     )
   }
-
-
 
   render() {
     return (

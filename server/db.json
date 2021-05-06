@@ -19,7 +19,7 @@
     {
       "title": "Raising Arizona",
       "description": "Couple Steals Baby. Everything works out.",
-      "price": "$14.99",
+      "price": "$15.99",
       "quantity": "99",
       "image": "baby",
       "id": 3
@@ -43,7 +43,7 @@
     {
       "title": "The Golden Child",
       "description": "Child finder finds child",
-      "price": "$19.99",
+      "price": "$18.99",
       "quantity": "143",
       "image": "Jupiter",
       "id": 6

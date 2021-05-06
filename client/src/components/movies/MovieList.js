@@ -3,6 +3,10 @@ import { connect } from 'react-redux'
 import { fetchMovies, fetchTitles, fetchDescriptions, fetchPrices, fetchQuantities } from '../../actions'
 import { Link } from 'react-router-dom'
 
+const columnStyles = {
+  fontWeight: 'bold'
+}
+
 
 class MovieList extends React.Component {
 
@@ -27,35 +31,40 @@ class MovieList extends React.Component {
           <i className="huge middle aligned film icon"></i>
           <div className="content">
             {/*  */}
-            <div className="ui five column relaxed grid" style={{ fontWeight: 'bold' }}>
-              <div className="column">
-                <div>Title</div>
+            <div className="ui five column relaxed grid" >
+              <div className="column" style={columnStyles}>
+                <div className="item">Title</div>
                 <Link to={`/movies/${movie.id}`} className="header">{movie.title}</Link>
               </div>
-              <div className="column">
+
+              <div className="column" style={columnStyles}>
                 Description
-          <div className="description">{movie.description}</div>
+                <div className="description">
+                  {movie.description}
+                </div>
               </div>
-              <div className="column">
+
+              <div className="column" style={columnStyles}>
                 Price
-          <div className="price">{movie.price}</div>
+                <div className="price">
+                  {movie.price}
+                </div>
               </div>
-              <div className="column">
+
+              <div className="column" style={columnStyles}>
                 Quantity
-          <div className="quantity">{movie.quantity}</div>
+                <div className="quantity">
+                  {movie.quantity}
+                </div>
               </div>
-              <div className="column">
+              
+              <div className="column" style={columnStyles}>
                 Image
-          <div className="image">{movie.image}</div>
+                <div className="image">
+                  {movie.image}
+                </div>
               </div>
             </div>
-
-
-
-
-
-
-
           </div>
         </div>
       )
